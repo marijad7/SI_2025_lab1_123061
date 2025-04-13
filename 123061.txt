@@ -1,1 +1,57 @@
 123061 
+DEL 2:
+
+13. Downloads all branches from the remote repository
+- git fetch origin 
+
+14. Switched to branch
+- git checkout 2-find-all-completed-tasks
+
+15. Creates GetCompletedTasks method
+
+16. Commit with message "Implement getCompletedTasks method"
+- git add SI2025Lab1Main.java
+- git commit -m "Implement getCompletedTasks method"
+
+17. Synchronize changes to remote repository
+- git push origin 2-find-all-completed-tasks
+
+18. Pull request created
+
+19. Second and third branch
+Second:
+- checkout 4-sort-tasks-by-priority
+- git add SI2025Lab1Main.java
+- git commit -m "Implement sortTasksByPriority method"
+- git push origin 4-sort-tasks-by-priority
+- Pull request created
+Third:
+- git checkout 6-find-the-highest-priority-unfinished-task
+- git add SI2025Lab1Main.java 
+- git commit -m "Implement getMostUrgentTasks method"
+- git push origin 6-find-the-highest-priority-unfinished-task
+- Pull request created
+
+20. Merge 2 Pull Requests
+
+21. The corresponding issues are in done column
+
+22. Swithc to master and merge the third branch
+- git checkout master
+- git merge 6-find-the-highest-priority-unfinished-task
+
+23. Synchronize remote master with local
+- git fetch origin
+- git pull origin master
+- git push origin master
+
+24. The pull request is closed and the ticket is in done column
+
+25. Create logs.txt and run  git log --oneline --graph --all
+- git log --oneline --graph --all > logs.txt
+- add 123061.txt
+- git add *
+- git commit -m "Final commit"
+
+26. 
+- git push origin master
