@@ -91,8 +91,24 @@ class TaskManager {
 
     // 6. Find the highest-priority unfinished task
     public List<Task> getMostUrgentTasks() {
-        // TODO: Implement logic to find most urgent tasks
-        return new ArrayList<>();
+        List<Task> urgentTasks = new ArrayList<>();
+        Priority highestPriority = Priority.LOW; // Start with lowest priority
+        
+        // First, find the highest priority among unfinished tasks
+        for (Task task : tasks) {
+            if (!task.isCompleted() && task.getPriority().ordinal() < highestPriority.ordinal()) {
+                highestPriority = task.getPriority();
+            }
+        }
+        
+        // Then, collect all unfinished tasks with that priority
+        for (Task task : tasks) {
+            if (!task.isCompleted() && task.getPriority() == highestPriority) {
+                urgentTasks.add(task);
+            }
+        }
+        
+        return urgentTasks;
     }
 
     // 7. Count tasks per category
@@ -124,5 +140,12 @@ public class SI2025Lab1Main {
         // Print all tasks
         System.out.println("All tasks:");
         manager.printTasks();
+        
+        // Find and print most urgent tasks
+        System.out.println("\nMost urgent tasks:");
+        List<Task> urgentTasks = manager.getMostUrgentTasks();
+        for (Task task : urgentTasks) {
+            System.out.println(task);
+        }
     }
 } 
