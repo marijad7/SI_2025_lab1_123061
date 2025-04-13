@@ -1,0 +1,15 @@
+*   9e69f38 Merge branch '2-find-all-completed-tasks' into master
+|\  
+| * 7b45231 Implement getCompletedTasks method
+* |   8e7213a Merge pull request #11 from marijad7/4-sort-tasks-by-priority
+|\ \  
+| * | 14309dc Implement sortTasksByPriority method
+| |/  
+* |   c5be40d Merge pull request #12 from marijad7/6-find-the-highest-priority-unfinished-task
+|\ \  
+| |/  
+|/|   
+| * ce8d948 Implement getMostUrgentTasks method
+|/  
+* e88095e Add starter code
+* 65c1e2c Initial commit
